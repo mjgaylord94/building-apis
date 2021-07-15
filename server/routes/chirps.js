@@ -17,12 +17,12 @@ router.post('/', (req, res) => {
     res.sendStatus(200);
 });
 
-router.put('/:id?', (req, res) => {
+router.put('/:id', (req, res) => {
     chirpsStore.UpdateChirp(req.params.id, req.body);
     res.sendStatus(200);
 });
 
-router.delete('/:id?', (req, res) => {
+router.delete('/:id', (req, res) => {
     chirpsStore.DeleteChirp(req.params.id);
     res.sendStatus(200);
 })
